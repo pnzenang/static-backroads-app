@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/components/navbar.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1684767747691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1684768228482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,46 +1,59 @@\n import { pageLinks, socialLinks } from '../data';\n import logo from '../images/logo.svg';\n+import {} from 'react-icons/fa';\n \n const Navbar = () => {\n   return (\n-    <nav class='navbar'>\n-      <div class='nav-center'>\n-        <div class='nav-header'>\n-          <img src={logo} class='nav-logo' alt='backroads' />\n-          <button type='button' class='nav-toggle' id='nav-toggle'>\n-            <i class='fas fa-bars'></i>\n+    <nav className='navbar'>\n+      <div className='nav-center'>\n+        <div className='nav-header'>\n+          <img src={logo} className='nav-logo' alt='backroads' />\n+          <button type='button' className='nav-toggle' id='nav-toggle'>\n+            <i className='fas fa-bars'></i>\n           </button>\n         </div>\n         {/* <!-- left this comment on purpose --> */}\n-        <ul class='nav-links' id='nav-links'>\n+        <ul className='nav-links' id='nav-links'>\n           {pageLinks.map((link) => {\n+            const { id, href, icon } = link;\n             return (\n               <li key={link.id}>\n-                <a href={link.href} class='nav-link'>\n+                <a href={link.href} className='nav-link'>\n                   {link.text}\n                 </a>\n               </li>\n             );\n           })}\n         </ul>\n \n-        <ul class='nav-icons'>\n+        <ul className='nav-icons'>\n+          {socialLinks.map((link) => {\n+            <li>\n+              <a href={href} target='_blank' className='nav-icon'>\n+                <i className='nav-icon'></i>\n+              </a>\n+            </li>;\n+          })}\n+\n           <li>\n-            <a href='https://www.twitter.com' target='_blank' class='nav-icon'>\n-              <i class='fab fa-facebook'></i>\n+            <a\n+              href='https://www.twitter.com'\n+              target='_blank'\n+              className='nav-icon'\n+            >\n+              <i className='fab fa-twitter'></i>\n             </a>\n           </li>\n           <li>\n-            <a href='https://www.twitter.com' target='_blank' class='nav-icon'>\n-              <i class='fab fa-twitter'></i>\n+            <a\n+              href='https://www.twitter.com'\n+              target='_blank'\n+              className='nav-icon'\n+            >\n+              <i className='fab fa-squarespace'></i>\n             </a>\n           </li>\n-          <li>\n-            <a href='https://www.twitter.com' target='_blank' class='nav-icon'>\n-              <i class='fab fa-squarespace'></i>\n-            </a>\n-          </li>\n         </ul>\n       </div>\n     </nav>\n   );\n"
+                },
+                {
+                    "date": 1684768300612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n         </div>\n         {/* <!-- left this comment on purpose --> */}\n         <ul className='nav-links' id='nav-links'>\n           {pageLinks.map((link) => {\n-            const { id, href, icon } = link;\n             return (\n               <li key={link.id}>\n                 <a href={link.href} className='nav-link'>\n                   {link.text}\n@@ -27,11 +26,12 @@\n         </ul>\n \n         <ul className='nav-icons'>\n           {socialLinks.map((link) => {\n+            const { id, href, icon } = link;\n             <li>\n               <a href={href} target='_blank' className='nav-icon'>\n-                <i className='nav-icon'></i>\n+                <i className={icon}></i>\n               </a>\n             </li>;\n           })}\n \n"
+                },
+                {
+                    "date": 1684768322409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n \n         <ul className='nav-icons'>\n           {socialLinks.map((link) => {\n             const { id, href, icon } = link;\n-            <li>\n+            <li key={id}>\n               <a href={href} target='_blank' className='nav-icon'>\n                 <i className={icon}></i>\n               </a>\n             </li>;\n"
+                },
+                {
+                    "date": 1684768356029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,27 +33,8 @@\n                 <i className={icon}></i>\n               </a>\n             </li>;\n           })}\n-\n-          <li>\n-            <a\n-              href='https://www.twitter.com'\n-              target='_blank'\n-              className='nav-icon'\n-            >\n-              <i className='fab fa-twitter'></i>\n-            </a>\n-          </li>\n-          <li>\n-            <a\n-              href='https://www.twitter.com'\n-              target='_blank'\n-              className='nav-icon'\n-            >\n-              <i className='fab fa-squarespace'></i>\n-            </a>\n-          </li>\n         </ul>\n       </div>\n     </nav>\n   );\n"
+                },
+                {
+                    "date": 1684768872797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,12 +23,12 @@\n               </li>\n             );\n           })}\n         </ul>\n-\n         <ul className='nav-icons'>\n           {socialLinks.map((link) => {\n             const { id, href, icon } = link;\n+            return;\n             <li key={id}>\n               <a href={href} target='_blank' className='nav-icon'>\n                 <i className={icon}></i>\n               </a>\n"
+                },
+                {
+                    "date": 1684768892632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,14 +26,15 @@\n         </ul>\n         <ul className='nav-icons'>\n           {socialLinks.map((link) => {\n             const { id, href, icon } = link;\n-            return;\n-            <li key={id}>\n-              <a href={href} target='_blank' className='nav-icon'>\n-                <i className={icon}></i>\n-              </a>\n-            </li>;\n+            return (\n+              <li key={id}>\n+                <a href={href} target='_blank' className='nav-icon'>\n+                  <i className={icon}></i>\n+                </a>\n+              </li>\n+            );\n           })}\n         </ul>\n       </div>\n     </nav>\n"
+                },
+                {
+                    "date": 1684768935097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             const { id, href, icon } = link;\n             return (\n               <li key={id}>\n                 <a href={href} target='_blank' className='nav-icon'>\n-                  <i className={icon}></i>\n+                  {icon}\n                 </a>\n               </li>\n             );\n           })}\n"
+                },
+                {
+                    "date": 1684777348842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         <ul className='nav-links' id='nav-links'>\n           {pageLinks.map((link) => {\n             return (\n               <li key={link.id}>\n-                <a href={link.href} className='nav-link'>\n+                <a href={link.href} rel='noreferrer' className='nav-link'>\n                   {link.text}\n                 </a>\n               </li>\n             );\n"
+                },
+                {
+                    "date": 1684777388987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,14 @@\n           {socialLinks.map((link) => {\n             const { id, href, icon } = link;\n             return (\n               <li key={id}>\n-                <a href={href} target='_blank' className='nav-icon'>\n+                <a\n+                  href={href}\n+                  target='_blank'\n+                  rel='noreferrer'\n+                  className='nav-icon'\n+                >\n                   {icon}\n                 </a>\n               </li>\n             );\n"
+                }
+            ],
+            "date": 1684767747691,
+            "name": "Commit-0",
+            "content": "import { pageLinks, socialLinks } from '../data';\nimport logo from '../images/logo.svg';\n\nconst Navbar = () => {\n  return (\n    <nav class='navbar'>\n      <div class='nav-center'>\n        <div class='nav-header'>\n          <img src={logo} class='nav-logo' alt='backroads' />\n          <button type='button' class='nav-toggle' id='nav-toggle'>\n            <i class='fas fa-bars'></i>\n          </button>\n        </div>\n        {/* <!-- left this comment on purpose --> */}\n        <ul class='nav-links' id='nav-links'>\n          {pageLinks.map((link) => {\n            return (\n              <li key={link.id}>\n                <a href={link.href} class='nav-link'>\n                  {link.text}\n                </a>\n              </li>\n            );\n          })}\n        </ul>\n\n        <ul class='nav-icons'>\n          <li>\n            <a href='https://www.twitter.com' target='_blank' class='nav-icon'>\n              <i class='fab fa-facebook'></i>\n            </a>\n          </li>\n          <li>\n            <a href='https://www.twitter.com' target='_blank' class='nav-icon'>\n              <i class='fab fa-twitter'></i>\n            </a>\n          </li>\n          <li>\n            <a href='https://www.twitter.com' target='_blank' class='nav-icon'>\n              <i class='fab fa-squarespace'></i>\n            </a>\n          </li>\n        </ul>\n      </div>\n    </nav>\n  );\n};\nexport default Navbar;\n"
+        }
+    ]
+}

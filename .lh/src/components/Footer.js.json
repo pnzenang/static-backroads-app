@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/components/Footer.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1684774797599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1684774850024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,28 +13,8 @@\n               </a>\n             </li>\n           );\n         })}\n-        <li>\n-          <a href='#home' className='footer-link'>\n-            home\n-          </a>\n-        </li>\n-        <li>\n-          <a href='#about' className='footer-link'>\n-            about\n-          </a>\n-        </li>\n-        <li>\n-          <a href='#services' className='footer-link'>\n-            services\n-          </a>\n-        </li>\n-        <li>\n-          <a href='#featured' className='footer-link'>\n-            featured\n-          </a>\n-        </li>\n       </ul>\n       <ul className='footer-icons'>\n         <li>\n           <a\n"
+                },
+                {
+                    "date": 1684774974847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,36 +14,19 @@\n             </li>\n           );\n         })}\n       </ul>\n-      <ul className='footer-icons'>\n-        <li>\n-          <a\n-            href='https://www.twitter.com'\n-            target='_blank'\n-            className='footer-icon'\n-          >\n-            <i className='fab fa-facebook'></i>\n-          </a>\n-        </li>\n-        <li>\n-          <a\n-            href='https://www.twitter.com'\n-            target='_blank'\n-            className='footer-icon'\n-          >\n-            <i className='fab fa-twitter'></i>\n-          </a>\n-        </li>\n-        <li>\n-          <a\n-            href='https://www.twitter.com'\n-            target='_blank'\n-            className='footer-icon'\n-          >\n-            <i className='fab fa-squarespace'></i>\n-          </a>\n-        </li>\n+      <ul className='nav-icons'>\n+        {socialLinks.map((link) => {\n+          const { id, href, icon } = link;\n+          return (\n+            <li key={id}>\n+              <a href={href} target='_blank' className='nav-icon'>\n+                {icon}\n+              </a>\n+            </li>\n+          );\n+        })}\n       </ul>\n       <p className='copyright'>\n         copyright &copy; Backroads travel tours company\n         <span id='date'></span> all rights reserved\n"
+                },
+                {
+                    "date": 1684774995997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { pageLinks } from '../data';\n-\n+import { socialLinks } from '../data';\n const Footer = () => {\n   return (\n     <footer className='section footer'>\n       <ul className='footer-links'>\n"
+                },
+                {
+                    "date": 1684775106732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n             </li>\n           );\n         })}\n       </ul>\n-      <ul className='nav-icons'>\n+      <ul className='footer-icons'>\n         {socialLinks.map((link) => {\n           const { id, href, icon } = link;\n           return (\n             <li key={id}>\n"
+                },
+                {
+                    "date": 1684775209105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n         })}\n       </ul>\n       <p className='copyright'>\n         copyright &copy; Backroads travel tours company\n-        <span id='date'></span> all rights reserved\n+        <span id='date'>{new Date().getFullYear()}</span> all rights reserved\n       </p>\n     </footer>\n   );\n };\n"
+                },
+                {
+                    "date": 1684775610255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,10 @@\n         })}\n       </ul>\n       <p className='copyright'>\n         copyright &copy; Backroads travel tours company\n-        <span id='date'>{new Date().getFullYear()}</span> all rights reserved\n+        <span id='date'>{2009 + new Date().getFullYear()}</span> all rights\n+        reserved\n       </p>\n     </footer>\n   );\n };\n"
+                },
+                {
+                    "date": 1684775632289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,9 @@\n         })}\n       </ul>\n       <p className='copyright'>\n         copyright &copy; Backroads travel tours company\n-        <span id='date'>{2009 + new Date().getFullYear()}</span> all rights\n-        reserved\n+        <span id='date'>{new Date().getFullYear()}</span> all rights reserved\n       </p>\n     </footer>\n   );\n };\n"
+                },
+                {
+                    "date": 1684777237579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         {pageLinks.map((link) => {\n           const { id, href, text } = link;\n           return (\n             <li key={id}>\n-              <a href={href} className='footer-link'>\n+              <a href={href} rel='noreferrer' className='footer-link'>\n                 {text}\n               </a>\n             </li>\n           );\n"
+                },
+                {
+                    "date": 1684777408442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,14 @@\n         {socialLinks.map((link) => {\n           const { id, href, icon } = link;\n           return (\n             <li key={id}>\n-              <a href={href} target='_blank' className='nav-icon'>\n+              <a\n+                href={href}\n+                rel='noreferrer'\n+                target='_blank'\n+                className='nav-icon'\n+              >\n                 {icon}\n               </a>\n             </li>\n           );\n"
+                }
+            ],
+            "date": 1684774797599,
+            "name": "Commit-0",
+            "content": "import { pageLinks } from '../data';\n\nconst Footer = () => {\n  return (\n    <footer className='section footer'>\n      <ul className='footer-links'>\n        {pageLinks.map((link) => {\n          const { id, href, text } = link;\n          return (\n            <li key={id}>\n              <a href={href} className='footer-link'>\n                {text}\n              </a>\n            </li>\n          );\n        })}\n        <li>\n          <a href='#home' className='footer-link'>\n            home\n          </a>\n        </li>\n        <li>\n          <a href='#about' className='footer-link'>\n            about\n          </a>\n        </li>\n        <li>\n          <a href='#services' className='footer-link'>\n            services\n          </a>\n        </li>\n        <li>\n          <a href='#featured' className='footer-link'>\n            featured\n          </a>\n        </li>\n      </ul>\n      <ul className='footer-icons'>\n        <li>\n          <a\n            href='https://www.twitter.com'\n            target='_blank'\n            className='footer-icon'\n          >\n            <i className='fab fa-facebook'></i>\n          </a>\n        </li>\n        <li>\n          <a\n            href='https://www.twitter.com'\n            target='_blank'\n            className='footer-icon'\n          >\n            <i className='fab fa-twitter'></i>\n          </a>\n        </li>\n        <li>\n          <a\n            href='https://www.twitter.com'\n            target='_blank'\n            className='footer-icon'\n          >\n            <i className='fab fa-squarespace'></i>\n          </a>\n        </li>\n      </ul>\n      <p className='copyright'>\n        copyright &copy; Backroads travel tours company\n        <span id='date'></span> all rights reserved\n      </p>\n    </footer>\n  );\n};\nexport default Footer;\n"
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "sourceFile": "src/data.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1684767676649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1684767684544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,13 @@\n-\n-import {FaTwitter, FaFacebook, FaGoogle} from 'react-icons/fa'\n+import { FaTwitter, FaFacebook, FaGoogle } from 'react-icons/fa';\n export const pageLinks = [\n   { id: 1, href: '#home', text: 'home' },\n   { id: 2, href: '#about', text: 'about' },\n   { id: 3, href: '#services', text: 'services' },\n   { id: 4, href: '#tours', text: 'tours' }\n ];\n \n export const socialLinks = [\n-  {id: 1, href: '#https://twitter.com', icon: {FaTwitter} },\n-  {id: 2, href: '#https://Facebook.com', icon: {FaFacebook} }\n-  {id: 3, href: '#http://Google.com', icon: {FaGoogle} }\n\\ No newline at end of file\n-]\n+  { id: 1, href: '#https://twitter.com', icon: { FaTwitter } },\n+  { id: 2, href: '#https://Facebook.com', icon: { FaFacebook } },\n+  { id: 3, href: '#http://Google.com', icon: { FaGoogle } }\n+];\n"
+                },
+                {
+                    "date": 1684768731228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n-import { FaTwitter, FaFacebook, FaGoogle } from 'react-icons/fa';\n+import { FaTwitter, FaFacebook, FaSquare } from 'react-icons/fa';\n export const pageLinks = [\n   { id: 1, href: '#home', text: 'home' },\n   { id: 2, href: '#about', text: 'about' },\n   { id: 3, href: '#services', text: 'services' },\n   { id: 4, href: '#tours', text: 'tours' }\n ];\n \n export const socialLinks = [\n-  { id: 1, href: '#https://twitter.com', icon: { FaTwitter } },\n-  { id: 2, href: '#https://Facebook.com', icon: { FaFacebook } },\n-  { id: 3, href: '#http://Google.com', icon: { FaGoogle } }\n+  { id: 1, href: '#https://twitter.com', icon: <FaTwitter /> },\n+  { id: 2, href: '#https://Facebook.com', icon: <FaFacebook /> },\n+  { id: 3, href: '#http://Google.com', icon: <FaSquare /> }\n ];\n"
+                },
+                {
+                    "date": 1684769082826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n   { id: 4, href: '#tours', text: 'tours' }\n ];\n \n export const socialLinks = [\n-  { id: 1, href: '#https://twitter.com', icon: <FaTwitter /> },\n-  { id: 2, href: '#https://Facebook.com', icon: <FaFacebook /> },\n-  { id: 3, href: '#http://Google.com', icon: <FaSquare /> }\n+  { id: 1, href: 'https://twitter.com', icon: <FaTwitter /> },\n+  { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n+  { id: 3, href: 'http://Google.com', icon: <FaSquare /> }\n ];\n"
+                },
+                {
+                    "date": 1684769256770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { FaTwitter, FaFacebook, FaSquare } from 'react-icons/fa';\n+import { FaTwitter, FaFacebook, FaSquarespace } from 'react-icons/fa';\n export const pageLinks = [\n   { id: 1, href: '#home', text: 'home' },\n   { id: 2, href: '#about', text: 'about' },\n   { id: 3, href: '#services', text: 'services' },\n@@ -8,6 +8,6 @@\n \n export const socialLinks = [\n   { id: 1, href: 'https://twitter.com', icon: <FaTwitter /> },\n   { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n-  { id: 3, href: 'http://Google.com', icon: <FaSquare /> }\n+  { id: 3, href: 'http://Google.com', icon: <FaSquarespace /> }\n ];\n"
+                },
+                {
+                    "date": 1684771088686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,4 +10,13 @@\n   { id: 1, href: 'https://twitter.com', icon: <FaTwitter /> },\n   { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n   { id: 3, href: 'http://Google.com', icon: <FaSquarespace /> }\n ];\n+\n+export const services = [\n+  {\n+    id: 1,\n+    icon: '',\n+    title: 'saving money',\n+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit Asperiores, officia.`\n+  }\n+];\n"
+                },
+                {
+                    "date": 1684771559461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   { id: 4, href: '#tours', text: 'tours' }\n ];\n \n export const socialLinks = [\n-  { id: 1, href: 'https://twitter.com', icon: <FaTwitter /> },\n+  { id: 1, href: 'https://twitter.com', icon: <FaTwitter color='red' /> },\n   { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n   { id: 3, href: 'http://Google.com', icon: <FaSquarespace /> }\n ];\n \n@@ -17,6 +17,18 @@\n     id: 1,\n     icon: '',\n     title: 'saving money',\n     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit Asperiores, officia.`\n+  },\n+  {\n+    id: 1,\n+    icon: '',\n+    title: 'saving money',\n+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Asperiores, officia.`\n+  },\n+  {\n+    id: 1,\n+    icon: '',\n+    title: 'saving money',\n+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit Asperiores, officia.`\n   }\n ];\n"
+                },
+                {
+                    "date": 1684771570820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   { id: 4, href: '#tours', text: 'tours' }\n ];\n \n export const socialLinks = [\n-  { id: 1, href: 'https://twitter.com', icon: <FaTwitter color='red' /> },\n+  { id: 1, href: 'https://twitter.com', icon: <FaTwitter /> },\n   { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n   { id: 3, href: 'http://Google.com', icon: <FaSquarespace /> }\n ];\n \n"
+                },
+                {
+                    "date": 1684771746841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,22 @@\n-import { FaTwitter, FaFacebook, FaSquarespace } from 'react-icons/fa';\n+import { FaTwitter, FaFacebook, FaSquarespace, FaSocks, FaTree, FaWallet } from 'react-icons/fa';\n export const pageLinks = [\n   { id: 1, href: '#home', text: 'home' },\n   { id: 2, href: '#about', text: 'about' },\n   { id: 3, href: '#services', text: 'services' },\n   { id: 4, href: '#tours', text: 'tours' }\n ];\n \n export const socialLinks = [\n-  { id: 1, href: 'https://twitter.com', icon: <FaTwitter /> },\n+  { id: 1, href: 'https://twitter.com', icon: <FaTwitter fontSize='1.5em' /> },\n   { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n   { id: 3, href: 'http://Google.com', icon: <FaSquarespace /> }\n ];\n \n export const services = [\n   {\n     id: 1,\n-    icon: '',\n+    icon: <FaWallet fontSize={}/>\n     title: 'saving money',\n     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit Asperiores, officia.`\n   },\n   {\n"
+                },
+                {
+                    "date": 1684771783716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   { id: 4, href: '#tours', text: 'tours' }\n ];\n \n export const socialLinks = [\n-  { id: 1, href: 'https://twitter.com', icon: <FaTwitter fontSize='1.5em' /> },\n+  { id: 1, href: 'https://twitter.com', icon: <FaTwitter fontSize={'1.5em'} /> },\n   { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n   { id: 3, href: 'http://Google.com', icon: <FaSquarespace /> }\n ];\n \n"
+                },
+                {
+                    "date": 1684771877582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   { id: 4, href: '#tours', text: 'tours' }\n ];\n \n export const socialLinks = [\n-  { id: 1, href: 'https://twitter.com', icon: <FaTwitter fontSize={'1.5em'} /> },\n+  { id: 1, href: 'https://twitter.com', icon: <FaTwitter style={{color:'red'}} /> },\n   { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n   { id: 3, href: 'http://Google.com', icon: <FaSquarespace /> }\n ];\n \n"
+                },
+                {
+                    "date": 1684771898044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n export const services = [\n   {\n     id: 1,\n-    icon: <FaWallet fontSize={}/>\n+    icon: <FaWallet />\n     title: 'saving money',\n     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit Asperiores, officia.`\n   },\n   {\n"
+                },
+                {
+                    "date": 1684771907786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,33 @@\n-import { FaTwitter, FaFacebook, FaSquarespace, FaSocks, FaTree, FaWallet } from 'react-icons/fa';\n+import {\n+  FaTwitter,\n+  FaFacebook,\n+  FaSquarespace,\n+  FaSocks,\n+  FaTree,\n+  FaWallet\n+} from 'react-icons/fa';\n export const pageLinks = [\n   { id: 1, href: '#home', text: 'home' },\n   { id: 2, href: '#about', text: 'about' },\n   { id: 3, href: '#services', text: 'services' },\n   { id: 4, href: '#tours', text: 'tours' }\n ];\n \n export const socialLinks = [\n-  { id: 1, href: 'https://twitter.com', icon: <FaTwitter style={{color:'red'}} /> },\n+  {\n+    id: 1,\n+    href: 'https://twitter.com',\n+    icon: <FaTwitter style={{ color: 'red' }} />\n+  },\n   { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n   { id: 3, href: 'http://Google.com', icon: <FaSquarespace /> }\n ];\n \n export const services = [\n   {\n     id: 1,\n-    icon: <FaWallet />\n+    icon: <FaWallet />,\n     title: 'saving money',\n     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit Asperiores, officia.`\n   },\n   {\n"
+                },
+                {
+                    "date": 1684771948903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n export const socialLinks = [\n   {\n     id: 1,\n     href: 'https://twitter.com',\n-    icon: <FaTwitter style={{ color: 'red' }} />\n+    icon: <FaTwitter style={{ color: 'red', fontSize: '1.5em' }} />\n   },\n   { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n   { id: 3, href: 'http://Google.com', icon: <FaSquarespace /> }\n ];\n"
+                },
+                {
+                    "date": 1684772046380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n export const socialLinks = [\n   {\n     id: 1,\n     href: 'https://twitter.com',\n-    icon: <FaTwitter style={{ color: 'red', fontSize: '1.5em' }} />\n+    icon: <FaTwitter style={{ fontSize: '1.5em' }} />\n   },\n   { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n   { id: 3, href: 'http://Google.com', icon: <FaSquarespace /> }\n ];\n"
+                },
+                {
+                    "date": 1684772073197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,18 @@\n     id: 1,\n     href: 'https://twitter.com',\n     icon: <FaTwitter style={{ fontSize: '1.5em' }} />\n   },\n-  { id: 2, href: 'https://Facebook.com', icon: <FaFacebook /> },\n-  { id: 3, href: 'http://Google.com', icon: <FaSquarespace /> }\n+  {\n+    id: 2,\n+    href: 'https://Facebook.com',\n+    icon: <FaFacebook style={{ fontSize: '1.5em' }} />\n+  },\n+  {\n+    id: 3,\n+    href: 'http://Google.com',\n+    icon: <FaSquarespace style={{ fontSize: '1.5em' }} />\n+  }\n ];\n \n export const services = [\n   {\n"
+                },
+                {
+                    "date": 1684772171656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,21 +33,21 @@\n \n export const services = [\n   {\n     id: 1,\n-    icon: <FaWallet />,\n+    icon: <FaWallet style={{ fontSize: '2em' }} />,\n     title: 'saving money',\n     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit Asperiores, officia.`\n   },\n   {\n-    id: 1,\n-    icon: '',\n+    id: 2,\n+    icon: <FaTree style={{ fontSize: '2em' }} />,\n     title: 'saving money',\n     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit.Asperiores, officia.`\n   },\n   {\n-    id: 1,\n-    icon: '',\n+    id: 3,\n+    icon: <FaSocks style={{ fontSize: '2em' }} />,\n     title: 'saving money',\n     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit Asperiores, officia.`\n   }\n ];\n"
+                },
+                {
+                    "date": 1684773359448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,11 @@\n+import tour1 from './images/tour-1.jpeg';\n+import tour2 from './images/tour-2.jpeg';\n+import tour3 from './images/tour-3.jpeg';\n+import tour4 from './images/tour-4.jpeg';\n+import tour5 from './images/tour-5.jpeg';\n+import tour6 from './images/tour-6.jpeg';\n+\n import {\n   FaTwitter,\n   FaFacebook,\n   FaSquarespace,\n@@ -50,4 +57,86 @@\n     title: 'saving money',\n     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit Asperiores, officia.`\n   }\n ];\n+\n+export const tours = [\n+  {\n+    id: 1,\n+    image: { tour1 },\n+    date: 'august 26th, 2022',\n+    title: 'Tibet Adventure',\n+    info: '',\n+    text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n+              vitae tempore voluptatum maxime reprehenderit eum quod\n+              exercitationem fugit, qui corporis.`,\n+    location: 'china',\n+    duration: 6,\n+    location: 2100\n+  },\n+\n+  {\n+    id: 2,\n+    image: { tour2 },\n+    date: 'august 26th, 2022',\n+    title: 'Berlin Adventure',\n+    info: '',\n+    text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n+              vitae tempore voluptatum maxime reprehenderit eum quod\n+              exercitationem fugit, qui corporis.`,\n+    location: 'Germany',\n+    duration: 6,\n+    location: 2100\n+  },\n+  {\n+    id: 3,\n+    image: { tour3 },\n+    date: 'august 26th, 2022',\n+    title: 'Tibet Adventure',\n+    info: '',\n+    text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n+              vitae tempore voluptatum maxime reprehenderit eum quod\n+              exercitationem fugit, qui corporis.`,\n+    location: 'china',\n+    duration: 6,\n+    location: 2100\n+  },\n+  {\n+    id: 4,\n+    image: { tour4 },\n+    date: 'august 26th, 2022',\n+    title: 'Paris Adventure',\n+    info: '',\n+    text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n+              vitae tempore voluptatum maxime reprehenderit eum quod\n+              exercitationem fugit, qui corporis.`,\n+    location: 'France',\n+    duration: 6,\n+    location: 2100\n+  },\n+  {\n+    id: 5,\n+    image: { tour5 },\n+    date: 'august 26th, 2022',\n+    title: 'Barcelona Adventure',\n+    info: '',\n+    text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n+              vitae tempore voluptatum maxime reprehenderit eum quod\n+              exercitationem fugit, qui corporis.`,\n+    location: 'spain',\n+    duration: 6,\n+    location: 2100\n+  },\n+  {\n+    id: 6,\n+    image: { tour6 },\n+    date: 'august 26th, 2022',\n+    title: 'Venise Adventure',\n+    info: '',\n+    text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n+              vitae tempore voluptatum maxime reprehenderit eum quod\n+              exercitationem fugit, qui corporis.`,\n+    location: 'Italy',\n+    duration: 6,\n+    location: 2100\n+  }\n+];\n"
+                },
+                {
+                    "date": 1684773439877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'china',\n     duration: 6,\n-    location: 2100\n+    location: 2200\n   },\n \n   {\n     id: 2,\n@@ -84,9 +84,9 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'Germany',\n     duration: 6,\n-    location: 2100\n+    location: 2500\n   },\n   {\n     id: 3,\n     image: { tour3 },\n@@ -97,9 +97,9 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'china',\n     duration: 6,\n-    location: 2100\n+    location: 2000\n   },\n   {\n     id: 4,\n     image: { tour4 },\n@@ -110,9 +110,9 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'France',\n     duration: 6,\n-    location: 2100\n+    location: 2700\n   },\n   {\n     id: 5,\n     image: { tour5 },\n@@ -123,9 +123,9 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'spain',\n     duration: 6,\n-    location: 2100\n+    location: 2800\n   },\n   {\n     id: 6,\n     image: { tour6 },\n@@ -136,7 +136,7 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'Italy',\n     duration: 6,\n-    location: 2100\n+    location: 3000\n   }\n ];\n"
+                },
+                {
+                    "date": 1684773652687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'china',\n     duration: 6,\n-    location: 2200\n+    cost: 2200\n   },\n \n   {\n     id: 2,\n@@ -84,9 +84,9 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'Germany',\n     duration: 6,\n-    location: 2500\n+    cost: 2500\n   },\n   {\n     id: 3,\n     image: { tour3 },\n@@ -97,9 +97,9 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'china',\n     duration: 6,\n-    location: 2000\n+    cost: 2000\n   },\n   {\n     id: 4,\n     image: { tour4 },\n@@ -110,9 +110,9 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'France',\n     duration: 6,\n-    location: 2700\n+    cost: 2700\n   },\n   {\n     id: 5,\n     image: { tour5 },\n@@ -123,9 +123,9 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'spain',\n     duration: 6,\n-    location: 2800\n+    cost: 2800\n   },\n   {\n     id: 6,\n     image: { tour6 },\n@@ -136,7 +136,7 @@\n               vitae tempore voluptatum maxime reprehenderit eum quod\n               exercitationem fugit, qui corporis.`,\n     location: 'Italy',\n     duration: 6,\n-    location: 3000\n+    cost: 3000\n   }\n ];\n"
+                },
+                {
+                    "date": 1684773968938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n   },\n \n   {\n     id: 2,\n-    image: { tour2 },\n+    image: tour2,\n     date: 'august 26th, 2022',\n     title: 'Berlin Adventure',\n     info: '',\n     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n"
+                },
+                {
+                    "date": 1684773980243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n     cost: 2500\n   },\n   {\n     id: 3,\n-    image: { tour3 },\n+    image: tour3,\n     date: 'august 26th, 2022',\n     title: 'Tibet Adventure',\n     info: '',\n     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n"
+                },
+                {
+                    "date": 1684773986105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n     cost: 2000\n   },\n   {\n     id: 4,\n-    image: { tour4 },\n+    image: tour4,\n     date: 'august 26th, 2022',\n     title: 'Paris Adventure',\n     info: '',\n     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n"
+                },
+                {
+                    "date": 1684773998476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -114,9 +114,9 @@\n     cost: 2700\n   },\n   {\n     id: 5,\n-    image: { tour5 },\n+    image: tour5,\n     date: 'august 26th, 2022',\n     title: 'Barcelona Adventure',\n     info: '',\n     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n"
+                },
+                {
+                    "date": 1684774008497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n \n export const tours = [\n   {\n     id: 1,\n-    image: { tour1 },\n+    image: tour1,\n     date: 'august 26th, 2022',\n     title: 'Tibet Adventure',\n     info: '',\n     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n"
+                },
+                {
+                    "date": 1684774035975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -127,9 +127,9 @@\n     cost: 2800\n   },\n   {\n     id: 6,\n-    image: { tour6 },\n+    image: tour6,\n     date: 'august 26th, 2022',\n     title: 'Venise Adventure',\n     info: '',\n     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque\n"
+                }
+            ],
+            "date": 1684767676649,
+            "name": "Commit-0",
+            "content": "\nimport {FaTwitter, FaFacebook, FaGoogle} from 'react-icons/fa'\nexport const pageLinks = [\n  { id: 1, href: '#home', text: 'home' },\n  { id: 2, href: '#about', text: 'about' },\n  { id: 3, href: '#services', text: 'services' },\n  { id: 4, href: '#tours', text: 'tours' }\n];\n\nexport const socialLinks = [\n  {id: 1, href: '#https://twitter.com', icon: {FaTwitter} },\n  {id: 2, href: '#https://Facebook.com', icon: {FaFacebook} }\n  {id: 3, href: '#http://Google.com', icon: {FaGoogle} }\n]"
+        }
+    ]
+}

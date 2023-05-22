@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/components/Services.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1684770679991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1684770713607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Title from './Title';\n const Services = () => {\n   return (\n     <section className='section services' id='services'>\n-      <Title title='about' subTitle='us' />\n+      <Title title='our' subTitle='services' />\n \n       <div className='section-center services-center'>\n         <article className='service'>\n           <span className='service-icon'>\n"
+                },
+                {
+                    "date": 1684772476634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,24 @@\n import Title from './Title';\n+import { services } from '../data';\n const Services = () => {\n   return (\n     <section className='section services' id='services'>\n       <Title title='our' subTitle='services' />\n \n       <div className='section-center services-center'>\n+        {services.map((service) => {\n+          const { id, icon, text, title } = service;\n+          return (\n+            <article className='service'>\n+              <span className='service-icon'>{icon}</span>\n+              <div className='service-info'>\n+                <h4 className='service-title'>{title}</h4>\n+                <p className='service-text'> {text}</p>\n+              </div>\n+            </article>\n+          );\n+        })}\n         <article className='service'>\n           <span className='service-icon'>\n             <i className='fas fa-wallet fa-fw'></i>\n           </span>\n"
+                },
+                {
+                    "date": 1684772506483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,20 +17,8 @@\n               </div>\n             </article>\n           );\n         })}\n-        <article className='service'>\n-          <span className='service-icon'>\n-            <i className='fas fa-wallet fa-fw'></i>\n-          </span>\n-          <div className='service-info'>\n-            <h4 className='service-title'>saving money</h4>\n-            <p className='service-text'>\n-              Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-              Asperiores, officia.\n-            </p>\n-          </div>\n-        </article>\n \n         <article className='service'>\n           <span className='service-icon'>\n             <i className='fas fa-tree fa-fw'></i>\n"
+                },
+                {
+                    "date": 1684772528494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,21 +30,8 @@\n               Asperiores, officia.\n             </p>\n           </div>\n         </article>\n-\n-        <article className='service'>\n-          <span className='service-icon'>\n-            <i className='fas fa-socks fa-fw'></i>\n-          </span>\n-          <div className='service-info'>\n-            <h4 className='service-title'>amazing comfort</h4>\n-            <p className='service-text'>\n-              Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-              Asperiores, officia.\n-            </p>\n-          </div>\n-        </article>\n       </div>\n     </section>\n   );\n };\n"
+                },
+                {
+                    "date": 1684772540247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,21 +17,8 @@\n               </div>\n             </article>\n           );\n         })}\n-\n-        <article className='service'>\n-          <span className='service-icon'>\n-            <i className='fas fa-tree fa-fw'></i>\n-          </span>\n-          <div className='service-info'>\n-            <h4 className='service-title'>endless hiking</h4>\n-            <p className='service-text'>\n-              Lorem ipsum dolor sit amet consectetur adipisicing elit.\n-              Asperiores, officia.\n-            </p>\n-          </div>\n-        </article>\n       </div>\n     </section>\n   );\n };\n"
+                },
+                {
+                    "date": 1684777321195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n       <div className='section-center services-center'>\n         {services.map((service) => {\n           const { id, icon, text, title } = service;\n           return (\n-            <article className='service'>\n+            <article className='service' key={id}>\n               <span className='service-icon'>{icon}</span>\n               <div className='service-info'>\n                 <h4 className='service-title'>{title}</h4>\n                 <p className='service-text'> {text}</p>\n"
+                }
+            ],
+            "date": 1684770679991,
+            "name": "Commit-0",
+            "content": "import Title from './Title';\nconst Services = () => {\n  return (\n    <section className='section services' id='services'>\n      <Title title='about' subTitle='us' />\n\n      <div className='section-center services-center'>\n        <article className='service'>\n          <span className='service-icon'>\n            <i className='fas fa-wallet fa-fw'></i>\n          </span>\n          <div className='service-info'>\n            <h4 className='service-title'>saving money</h4>\n            <p className='service-text'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit.\n              Asperiores, officia.\n            </p>\n          </div>\n        </article>\n\n        <article className='service'>\n          <span className='service-icon'>\n            <i className='fas fa-tree fa-fw'></i>\n          </span>\n          <div className='service-info'>\n            <h4 className='service-title'>endless hiking</h4>\n            <p className='service-text'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit.\n              Asperiores, officia.\n            </p>\n          </div>\n        </article>\n\n        <article className='service'>\n          <span className='service-icon'>\n            <i className='fas fa-socks fa-fw'></i>\n          </span>\n          <div className='service-info'>\n            <h4 className='service-title'>amazing comfort</h4>\n            <p className='service-text'>\n              Lorem ipsum dolor sit amet consectetur adipisicing elit.\n              Asperiores, officia.\n            </p>\n          </div>\n        </article>\n      </div>\n    </section>\n  );\n};\nexport default Services;\n"
+        }
+    ]
+}

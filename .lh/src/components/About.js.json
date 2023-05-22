@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/components/About.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1684769811350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1684769975811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import aboutImage from '../images/main.jpeg';\n+import aboutImage from '../images/beach.jpeg';\n \n const About = () => {\n   return (\n     <section className='section' id='about'>\n"
+                },
+                {
+                    "date": 1684770595964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import aboutImage from '../images/beach.jpeg';\n+import Title from './Title';\n \n const About = () => {\n   return (\n     <section className='section' id='about'>\n+      <Title title='about' subTitle='us' />\n       <div className='section-title'>\n         <h2>\n           about <span>us</span>\n         </h2>\n"
+                },
+                {
+                    "date": 1684770605858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,13 +4,8 @@\n const About = () => {\n   return (\n     <section className='section' id='about'>\n       <Title title='about' subTitle='us' />\n-      <div className='section-title'>\n-        <h2>\n-          about <span>us</span>\n-        </h2>\n-      </div>\n \n       <div className='section-center about-center'>\n         <div className='about-img'>\n           <img src={aboutImage} className='about-photo' alt='awesome beach' />\n"
+                },
+                {
+                    "date": 1684777538661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n const About = () => {\n   return (\n     <section className='section' id='about'>\n       <Title title='about' subTitle='us' />\n-\n       <div className='section-center about-center'>\n         <div className='about-img'>\n           <img src={aboutImage} className='about-photo' alt='awesome beach' />\n         </div>\n@@ -21,9 +20,9 @@\n             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur\n             quisquam harum nam cumque temporibus explicabo dolorum sapiente odio\n             unde dolor?\n           </p>\n-          <a href='#' className='btn'>\n+          <a href='' className='btn'>\n             read more\n           </a>\n         </article>\n       </div>\n"
+                },
+                {
+                    "date": 1684777602157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur\n             quisquam harum nam cumque temporibus explicabo dolorum sapiente odio\n             unde dolor?\n           </p>\n-          <a href='' className='btn'>\n+          <a href='#home' className='btn'>\n             read more\n           </a>\n         </article>\n       </div>\n"
+                },
+                {
+                    "date": 1684777639387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur\n             quisquam harum nam cumque temporibus explicabo dolorum sapiente odio\n             unde dolor?\n           </p>\n-          <a href='#home' className='btn'>\n+          <a href='#about' className='btn'>\n             read more\n           </a>\n         </article>\n       </div>\n"
+                }
+            ],
+            "date": 1684769811350,
+            "name": "Commit-0",
+            "content": "import aboutImage from '../images/main.jpeg';\n\nconst About = () => {\n  return (\n    <section className='section' id='about'>\n      <div className='section-title'>\n        <h2>\n          about <span>us</span>\n        </h2>\n      </div>\n\n      <div className='section-center about-center'>\n        <div className='about-img'>\n          <img src={aboutImage} className='about-photo' alt='awesome beach' />\n        </div>\n        <article className='about-info'>\n          <h3>explore the difference</h3>\n          <p>\n            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur\n            quisquam harum nam cumque temporibus explicabo dolorum sapiente odio\n            unde dolor?\n          </p>\n          <p>\n            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur\n            quisquam harum nam cumque temporibus explicabo dolorum sapiente odio\n            unde dolor?\n          </p>\n          <a href='#' className='btn'>\n            read more\n          </a>\n        </article>\n      </div>\n    </section>\n  );\n};\nexport default About;\n"
+        }
+    ]
+}
